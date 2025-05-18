@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Django
+db.sqlite3
+*.log
+*.pot
+*.pyc
+*.mo
+*.db
+*.sqlite3
+.env
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Docker
+*.tar
+*.pid
+
+# Env
+.env
+.env.*
+
+# Migrations (optional if auto-generated or reset often)
+**/migrations/*.pyc
+**/migrations/__pycache__/
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Node (if using JS)
+node_modules/
+
+# Build
+build/
+dist/
+*.egg-info/

@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: code-editor
+    env: docker
+    region: oregon
+    plan: free
+    dockerfilePath: ./Dockerfile
+    buildCommand: ""
+    startCommand: gunicorn codeeditor.wsgi:application --bind 0.0.0.0:$PORT
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: codeeditor.settings
+      - key: SECRET_KEY
+        value: django-insecure-@1fyv68_rwf5uuv6la*n42mqit$^#(ur^(@mhbi46)-=0m+60^
+      - key: DATABASE_URL
+        fromDatabase:
+          name: codeeditor_db
+          property: connectionString
+ 
